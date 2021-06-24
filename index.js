@@ -67,21 +67,7 @@ inquirer
             response.license = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)\n\n`
         };
 
-    outline += `# ${response.title}\n\n
-    ## Description\n\n${response.description}\n\n
-    ### Table of Contents\n\n- [Installation](#installation)\n- [Usage](#usage)\n- [Credits](#credits)\n- [License](#license)\n\n
-    ## Installation\n\n${response.installation}\n
-    ## Usage\n\n${response.usage}\n\n
-    ## Guidelines\n\n${response.guidelines}\n\n
-    ## Credits\n\n
-    ## License\n
-    ${response.license}
-    ## Badges\n\n
-    ## Features\n\n
-    ## How to Contribute\n\n
-    ##### Please reach out via [email](mailto:${response.email}) if there is any questions or if you would be interested in contributing to this project.
-    ##### Github: [github.com/${response.github}](https://github.com/${response.github})\n\n
-    ## Tests\n\n`
+    outline += `# ${response.title}\n\n## Description\n\n${response.description}\n\n### Table of Contents\n\n- [Installation](#installation)\n- [Usage](#usage)\n- [Credits](#credits)\n- [License](#license)\n\n## Installation\n\n${response.installation}\n\n## Usage\n\n${response.usage}\n\n## Guidelines\n\n${response.guidelines}\n\n## Credits\n\n## License\n\n${response.license}## Badges\n\n## Features\n\n## How to Contribute\n\n##### Please reach out via [email](mailto:${response.email}) if there is any questions or if you would be interested in contributing to this project.##### Github: [github.com/${response.github}](https://github.com/${response.github})\n\n## Tests\n\n`
    
 
     fs.writeFile("./newreadme/readme.md", outline, (error) =>
