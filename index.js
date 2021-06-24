@@ -65,8 +65,8 @@ inquirer
         } else {
 
         };
-    outline += response.title;
-    outline += response.description;
+    outline += "# <\\`${response.title}`>\n\n"
+    outline += "## Description\n\\`${response.description}`ind\n\n"
     outline += response.installation;
     outline += response.usage;
     outline += response.guidelines;
@@ -74,8 +74,8 @@ inquirer
     outline += response.email;
     outline += response.license
 
-    fs.writeFile("./newreadme/readme.md", outline, (error, data) =>
-    error ? console.error(error) : console.log(data)
+    fs.writeFile("./newreadme/readme.md", outline, (error) =>
+    error ? console.error(error) : console.log("Success!")
 );
 }); 
 // += "# <`${response.title}>\n\n"
