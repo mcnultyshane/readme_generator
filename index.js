@@ -78,16 +78,12 @@ inquirer
     error ? console.error(error) : console.log(data)
 );
 }); 
-// # <Your-Project-Title>
-// ## Description
-
-// ## Table of Contents 
-// If your README is long, add a table of contents to make it easy for users to find what they need.
-// - [Installation](#installation)
-// - [Usage](#usage)
-// - [Credits](#credits)
-// - [License](#license)
-// ## Installation
+// += "# <`${response.title}>\n\n"
+// += "## Description\n`${response.description}`\n\n"
+// += "## Table of Contents\n- [Installation](#installation)\n- [Usage](#usage)\n- [Credits](#credits)- [License](#license)\n\n"
+// += "## Installation\n\n`${response.installation}`\n\n"
+// += "## Usage\n\n`${response.usage}`\n\n"
+// += "## Guidelines\n\n`${response.installation}`\n\n"
 
 // ## Usage
 // Provide instructions and examples for use. Include screenshots as needed.
