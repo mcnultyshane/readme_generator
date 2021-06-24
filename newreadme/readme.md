@@ -1,6 +1,6 @@
-# <\`${response.title}>
+# <\Shane is the man>
 
 ## Description
-\`${response.description}`ind
+\THis is a readme generator
 
-nopenopeyesshanshanApache 2.0
+open it up and use ithollerstop itbombget itApache 2.0

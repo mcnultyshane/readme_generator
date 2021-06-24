@@ -14,43 +14,43 @@ const questions = [];
 inquirer
     .prompt([{// WHEN I enter my project title
             type: 'input',
-            message: "What is the title of your project's title?",
+            message: "What is the title of your project?",
             name: 'title',
         },
         {// WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
             type: 'input',
-            message: 'Please type a description of the project?',
+            message: 'Please type a description of the project:',
             name: 'description',
         },
         {
             type: 'input',
-            message: 'Please type any installation instructions?',
+            message: 'Please type any installation instructions:',
             name: 'installation',
         },
         {
             type: 'input',
-            message: 'Please type any usage information to list?',
+            message: 'Please type any usage information to list:',
             name: 'usage',
         }, 
         {
             type: 'input',
-            message: 'Please type any contribution guidelines?',
+            message: 'Please type any contribution guidelines:',
             name: 'guidelines',
         }, 
         {// WHEN I choose a license for my application from a list of options
             type: 'list',
-            message: 'Are you listing a license?',
+            message: 'Are you listing a license:',
             name: 'license',
-            choices: ['Apache 2.0','MIT','GNU 2.0'],
+            choices: ['Apache 2.0','MIT','GNU 3.0'],
         }, 
         {
             type: 'input',
-            message: 'What is the name of your github account',
+            message: 'What is the name of your github account?',
             name: 'github',
           },
         {
             type: 'input',
-            message: 'What is your email address',
+            message: 'What is your email address?',
             name: 'email',
           },
           
@@ -59,14 +59,27 @@ inquirer
         console.log(response);
         let licenseLink = "";
         if (licenseLink === 'MIT') {
+            response.license = `Licensed Under the [MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n\n`;
 
         } else if (licenseLink === 'Apache 2.0') {
-
+            response.license =  `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)\n\n`;
         } else {
-
+            response.license = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)\n\n`
         };
-    outline += "# <\\`${response.title}`>\n\n"
-    outline += "## Description\n\\`${response.description}`ind\n\n"
+    outline += `# <\\${response.title}>\n\n
+    ## Description\n\\${response.description}\n\n
+    ## Table of Contents\n- [Installation](#installation)\n- [Usage](#usage)\n- [Credits](#credits)- [License](#license)\n\n
+    ## Installation\n\n${response.installation}\n\n
+    ## Usage\n\n${response.usage}\n\n
+    ## Guidelines\n\n${response.guidelines}\n\n
+    ## Credits\n\n
+    ## License\n
+    ${response.license}
+    ## Badges\n\n
+    ## Features\n\n
+    ## How to Contribute\n\n
+    Please reach out via [email](mailto:${response.email}) if there is any questions or if you would be interested in contributing to this project
+    ## Tests\n\n`
     outline += response.installation;
     outline += response.usage;
     outline += response.guidelines;
