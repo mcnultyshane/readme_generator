@@ -1,0 +1,1 @@
+yesThis is a readme Generator that is taking place in the node app.make certain you have node installed on your computerno information.  THank you.if you want to pay me money, I accept cashmcnultyshanemcnultyshanej@gmail.comMIT
