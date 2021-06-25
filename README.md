@@ -16,7 +16,7 @@
     Once that is complete, please create a clone of this repository.  Then navigate to the cloned repository in your terminal.  Then install the required npm modules by running 'npm i' in your terminal.  Finally, type 'node index.js' to begin the generator and follow the prompts.  
 
 ## Usage
-    The following is a walk though video of its uses: 
+    The following is a walk though video of its uses: [Walkthough Video](https://drive.google.com/file/d/1LopHHNmzX_19t42LeoI8ikS1O-rOEu9C/view)
 
 
 ## Guidelines
